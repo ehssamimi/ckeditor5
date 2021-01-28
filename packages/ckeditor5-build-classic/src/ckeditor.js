@@ -29,6 +29,10 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import Direction from 'ckeditor5-direction/src/direction';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import MathType from '@wiris/mathtype-ckeditor5';
+import Font from '@ckeditor/ckeditor5-font/src/font';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -42,6 +46,7 @@ ClassicEditor.builtinPlugins = [
 	BlockQuote,
 	CKFinder,
 	EasyImage,
+	Font,
 	Heading,
 	Image,
 	ImageCaption,
@@ -56,11 +61,74 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+	Direction,
+	Alignment,
+	MathType
 ];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
+	fontFamily: {
+		options: [
+			'default',
+			'IranSanse, sans-serif',
+			'Ubuntu Mono, Courier New, Courier, monospace'
+		]
+	},
+	fontColor: {
+		colors: [
+			{
+				color: 'hsl(0, 0%, 0%)',
+				label: 'Black'
+			},
+			{
+				color: 'hsl(0, 0%, 30%)',
+				label: 'Dim grey'
+			},
+			{
+				color: 'hsl(0, 0%, 60%)',
+				label: 'Grey'
+			},
+			{
+				color: 'hsl(0, 0%, 90%)',
+				label: 'Light grey'
+			},
+			{
+				color: 'hsl(0, 0%, 100%)',
+				label: 'White',
+				hasBorder: true
+			},
+
+			// ...
+		]
+	},
+	fontBackgroundColor: {
+		colors: [
+			{
+				color: 'hsl(0, 75%, 60%)',
+				label: 'Red'
+			},
+			{
+				color: 'hsl(30, 75%, 60%)',
+				label: 'Orange'
+			},
+			{
+				color: 'hsl(60, 75%, 60%)',
+				label: 'Yellow'
+			},
+			{
+				color: 'hsl(90, 75%, 60%)',
+				label: 'Light green'
+			},
+			{
+				color: 'hsl(120, 75%, 60%)',
+				label: 'Green'
+			},
+
+			// ...
+		]
+	},
 	toolbar: {
 		items: [
 			'heading',
@@ -79,7 +147,15 @@ ClassicEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'undo',
-			'redo'
+			'redo',
+			'direction',
+			'|',
+			'alignment',
+			'|',
+			'MathType', 'ChemType',
+			'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
+
+
 		]
 	},
 	image: {
@@ -98,5 +174,7 @@ ClassicEditor.defaultConfig = {
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'en'
+	language: 'fa'
+
 };
+
