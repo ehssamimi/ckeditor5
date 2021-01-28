@@ -28,8 +28,10 @@
 
 <script src="../build/ckeditor.js"></script>
 <script>
-	ClassicEditor.create( document.querySelector( '#editor' ) )
-		.then( editor => {
+	ClassicEditor.create( document.querySelector( '#editor' ), {
+		language: 'fa'
+	} )
+	.then( editor => {
 			window.editor = editor;
 		} )
 		.catch( error => {
