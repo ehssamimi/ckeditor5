@@ -73,8 +73,8 @@ ClassicEditor.builtinPlugins = [
 ClassicEditor.defaultConfig = {
 	fontFamily: {
 		options: [
-			'default',
 			'IranSanse, sans-serif',
+			'BYekan, sans-serif',
 			'Ubuntu Mono, Courier New, Courier, monospace'
 		]
 	},
@@ -85,16 +85,30 @@ ClassicEditor.defaultConfig = {
 				label: 'Black'
 			},
 			{
-				color: 'hsl(0, 0%, 30%)',
-				label: 'Dim grey'
-			},
-			{
 				color: 'hsl(0, 0%, 60%)',
 				label: 'Grey'
 			},
 			{
-				color: 'hsl(0, 0%, 90%)',
-				label: 'Light grey'
+				color: 'hsl(132, 12%, 24%)'	,
+				label: 'dark-green'
+			},
+
+			{
+				color: 	'hsl(137, 45%, 24%)',
+				label: 'green'
+			},
+			{
+				color: 	'hsl(150, 58%, 52%)'	,
+				label: 'success'
+			},
+			{
+				color: 	'hsl(48, 99%, 49%)' ,
+				label: 'Orange'
+			},
+			{
+				color: 'hsl(1, 60%, 35%)' 	,
+				label: 'White',
+				hasBorder: true
 			},
 			{
 				color: 'hsl(0, 0%, 100%)',
@@ -108,24 +122,24 @@ ClassicEditor.defaultConfig = {
 	fontBackgroundColor: {
 		colors: [
 			{
-				color: 'hsl(0, 75%, 60%)',
+				color: 'hsl(1, 60%, 35%)' ,
 				label: 'Red'
 			},
 			{
-				color: 'hsl(30, 75%, 60%)',
+				color: 	'hsl(48, 99%, 49%)',
 				label: 'Orange'
 			},
 			{
-				color: 'hsl(60, 75%, 60%)',
-				label: 'Yellow'
+				color: 	'hsl(150, 58%, 52%)',
+				label: 'success'
 			},
 			{
-				color: 'hsl(90, 75%, 60%)',
-				label: 'Light green'
+				color: 	'hsl(137, 45%, 24%)',
+				label: 'green'
 			},
 			{
-				color: 'hsl(120, 75%, 60%)',
-				label: 'Green'
+				color: 'hsl(132, 12%, 24%)'	,
+				label: 'dark-green'
 			},
 
 			// ...
