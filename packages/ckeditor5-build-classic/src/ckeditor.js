@@ -33,6 +33,7 @@ import Direction from 'ckeditor5-direction/src/direction';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import MathType from '@wiris/mathtype-ckeditor5';
 import Font from '@ckeditor/ckeditor5-font/src/font';
+import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -60,6 +61,7 @@ ClassicEditor.builtinPlugins = [
 	Paragraph,
 	PasteFromOffice,
 	Table,
+	TodoList,
 	TableToolbar,
 	TextTransformation,
 	Direction,
@@ -135,9 +137,11 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'bold',
 			'italic',
+			'|',
 			'link',
 			'bulletedList',
 			'numberedList',
+			'todoList',
 			'|',
 			'indent',
 			'outdent',
